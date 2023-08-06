@@ -1,0 +1,17 @@
+
+
+<div class="">
+
+    <app-header></app-header>
+
+    <div class="main__row">
+            <div class="sidebar">
+                <app-navbar (newItemEvent)="eventNav($event)" (newItemNewEvent)="createGroup($event)" (newItemDeleteEvent)="deleteGroup($event)" [datas]="data"></app-navbar>
+            </div>
+
+            <div class="main">
+                <app-roles [dataRoles]="dataRoles" (changeRolesEvent)="eventRoles($event)"></app-roles>
+            </div>
+    </div>
+
+</div>

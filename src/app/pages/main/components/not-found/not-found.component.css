@@ -1,0 +1,7 @@
+.not-found-img img {
+  max-height: 70vh;
+  object-position: center;
+  object-fit: contain;
+}
+
+/*# sourceMappingURL=not-found.component.css.map */

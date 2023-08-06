@@ -1,0 +1,32 @@
+<div class="roles">
+
+
+    <div class="search">
+
+        <h2>
+            Roles
+        </h2>
+
+        <div>
+            <label for="search">Search:</label>
+            <input type="search" id="search" name="search" [(ngModel)]="search" (ngModelChange)="serachFunc()">
+        </div>
+    </div>
+
+    <div *ngIf="dataRoles.roles">
+        <div *ngFor="let roles of dataRoles.roles; let i=index">
+            <input type="checkbox" id="label-{{i}}" name="{{roles.roleName}}" [(ngModel)]="roles.role"
+                   (ngModelChange)="changeRoles()">
+            <label for="label-{{i}}"> {{roles.roleName}}</label>
+        </div>
+    </div>
+
+    <div>
+        <div *ngFor="let roles of searchData; let i=index">
+            <input type="checkbox" id="label-{{i}}" name="{{roles.roleName}}" [(ngModel)]="roles.role"
+                   (ngModelChange)="changeRoles()">
+            <label for="label-{{i}}"> {{roles.roleName}}</label>
+        </div>
+    </div>
+
+</div>
