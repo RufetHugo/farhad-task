@@ -29,4 +29,10 @@
         </div>
     </div>
 
+    <div *ngIf="dataRoles.roles">
+        <label for="new-roles">New Roles:</label>
+        <input type="search" id="new-roles" name="new-roles" [(ngModel)]="newRoles">
+        <button type="submit" (click)="addRoles()">add</button>
+    </div>
+
 </div>

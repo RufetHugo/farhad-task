@@ -11,6 +11,7 @@ export class RolesComponent {
     data: any
     search: any
     searchData: any
+    newRoles: any
 
 
 
@@ -26,5 +27,15 @@ export class RolesComponent {
     }
 
     serachFunc() {
+    }
+
+    addRoles() {
+        let data = {
+            id: Math.floor(Math.random() * 100),
+            roleName: this.newRoles,
+            role: true,
+        }
+        this.dataRoles.roles.push(data);
+        this.newRoles = '';
     }
 }
